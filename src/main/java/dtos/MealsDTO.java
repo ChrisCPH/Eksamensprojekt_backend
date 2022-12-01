@@ -1,14 +1,15 @@
 package dtos;
 
+import entities.Meals;
+
 import java.util.ArrayList;
 
 public class MealsDTO {
 
-    private ArrayList<Object> meals;
-
+    private Meals[] meals;
     private String url = "https://www.themealdb.com/api/json/v1/1/filter.php?i=";
 
-    public MealsDTO(ArrayList<Object> meals, String url) {
+    public MealsDTO(Meals[] meals, String url) {
         this.meals = meals;
         this.url = url;
     }
@@ -16,11 +17,11 @@ public class MealsDTO {
     public MealsDTO() {
     }
 
-    public ArrayList<Object> getMeals() {
+    public Meals[] getMeals() {
         return meals;
     }
 
-    public void setMeals(ArrayList<Object> meals) {
+    public void setMeals(Meals[] meals) {
         this.meals = meals;
     }
 
